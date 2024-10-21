@@ -27,7 +27,7 @@
 #' points(seq(along = pal2), rep(2, length(pal2)), pch = 22, bg = pal2, cex = 8)
 #' pal3 <- OPcolors("pal3")
 #' points(seq(along = pal3), rep(3, length(pal3)), pch = 22, bg = pal3, cex = 8)
-OPcolors <- function(palette = c('Primary',
+OPColors <- function(palette = c('Primary',
                                  'Default' ,
                                  'Highlight',
                                  
