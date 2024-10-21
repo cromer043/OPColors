@@ -5,7 +5,7 @@ f###############################
 #This file copies code from jcolor https://jaredhuling.org/jcolors/
 #To apply Oakland Promise Color Palates
 ###############################
-# OPcolors
+# OPColors
 
 #' Vectors of colors for figures
 #'
@@ -159,10 +159,10 @@ OPColors <- function(palette = c('Primary',
 }
 
 
-# display.OPcolors
-#' Display OPcolors
+# display.OPColors
+#' Display OPColors
 #'
-#' displays the discrete OPcolors palettes
+#' displays the discrete OPColors palettes
 #'
 #' @param palette Character string indicating a palette of colors.
 #' @export
@@ -171,7 +171,7 @@ OPColors <- function(palette = c('Primary',
 #' @importFrom graphics text
 #' @importFrom graphics par
 #' @examples
-#' display_OPcolors()
+#' display_OPColors()
 display_OPColors <- function(palette = c('Primary',
                                          'Default' ,
                                          'Highlight',
@@ -193,7 +193,7 @@ display_OPColors <- function(palette = c('Primary',
                                          'College Completion highlight'))
 {
     palette <- match.arg(palette)
-    jcols   <- OPcolors(palette)
+    jcols   <- OPColors(palette)
     n       <- length(jcols)
     cnames  <- names(jcols)
     image(1:n, 1, as.matrix(1:n),
@@ -205,8 +205,8 @@ display_OPColors <- function(palette = c('Primary',
          labels = cnames, xpd = TRUE)
 }
 
-# display all OPcolors
-#' Display all OPcolors
+# display all OPColors
+#' Display all OPColors
 #'
 #' Creates different vectors of related colors that may be useful for figures.
 #'
@@ -216,7 +216,7 @@ display_OPColors <- function(palette = c('Primary',
 #' @importFrom graphics axis
 #' @importFrom graphics plot
 #' @examples
-#' display_all_OPcolors()
+#' display_all_OPColors()
 display_all_OPColors <- function()
 {
     palette <- c('Primary',
@@ -238,7 +238,7 @@ display_all_OPColors <- function()
                  'College Completion primary'   ,
                  'College Completion default',
                  'College Completion highlight')
-    jcols    <- sapply(palette, OPcolors)
+    jcols    <- sapply(palette, OPColors)
     maxlen   <- max(sapply(jcols, length))
     ncols    <- length(jcols)
 
@@ -267,14 +267,14 @@ display_all_OPColors <- function()
 
 
 
-#' OPcolors color scales
+#' OPColors color scales
 #'
-#' @inheritParams OPcolors
+#' @inheritParams OPColors
 #' @param ... additional parameters for \code{\link[ggplot2]{discrete_scale}}
-#' @export scale_color_OPcolors
+#' @export scale_color_OPColors
 #' @importFrom ggplot2 discrete_scale
 #' @importFrom scales manual_pal
-#' @rdname scale_OPcolors
+#' @rdname scale_OPColors
 #'
 #' @examples
 #' library(ggplot2)
@@ -298,12 +298,12 @@ display_all_OPColors <- function()
 #'           panel.grid.major = element_line(color = "grey45"),
 #'           panel.grid.minor = element_line(color = "grey25"))
 #'
-#' pltl + scale_color_OPcolors(palette = "default")
+#' pltl + scale_color_OPColors(palette = "default")
 #'
-#' pltd + scale_color_OPcolors(palette = "default")
+#' pltd + scale_color_OPColors(palette = "default")
 #'
 #'
-scale_color_OPcolors = function (palette = c('Primary',
+scale_color_OPColors = function (palette = c('Primary',
                                              'Default' ,
                                              'Highlight',
                                              
@@ -326,19 +326,19 @@ scale_color_OPcolors = function (palette = c('Primary',
 {
     palette <- match.arg(palette)
     discrete_scale("colour",
-                   "OPcolors",
-                   manual_pal(unname(OPcolors(palette))),
+                   "OPColors",
+                   manual_pal(unname(OPColors(palette))),
                    ...)
 }
 
-#' @export scale_colour_OPcolors
-#' @rdname scale_OPcolors
-scale_colour_OPcolors = scale_color_OPcolors
+#' @export scale_colour_OPColors
+#' @rdname scale_OPColors
+scale_colour_OPColors = scale_color_OPColors
 
 
-#' @export scale_fill_OPcolors
+#' @export scale_fill_OPColors
 #' @importFrom ggplot2 discrete_scale
-#' @rdname scale_OPcolors
+#' @rdname scale_OPColors
 scale_fill_OPColors = function (palette = c('Primary',
                                             'Default' ,
                                             'Highlight',
