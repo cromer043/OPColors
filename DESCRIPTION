@@ -1,0 +1,22 @@
+Package: OPColors
+Type: Package
+Title: Colors Palettes for R and 'ggplot2', Additional Themes for 'ggplot2' 
+Version: 0.0.5
+Authors@R: c(person("Carl", "Romer", role = c("aut", "cre"),
+    email = "carl.s.romer@gmail.com"))
+Description: Contains a selection of color palettes and 'ggplot2' themes designed by Oakland Promise.
+BugReports: https://github.com/cromer043/OPColors/issues
+License: MIT
+Encoding: UTF-8
+Depends:
+    R (>= 3.2.0)
+Imports:
+    grDevices,
+    scales,
+    ggplot2 (>= 3.0.0)
+RoxygenNote: 7.3.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    gridExtra
+VignetteBuilder: knitr
