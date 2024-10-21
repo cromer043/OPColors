@@ -333,7 +333,7 @@ scale_color_OPColors = function (palette = c('Primary',
     palette <- match.arg(palette)
     discrete_scale("colour",
                    "OPColors",
-                   manual_pal(unname(OPColors(palette))),
+                   scales::manual_pal(unname(OPColors(palette))),
                    ...)
 }
 
@@ -369,6 +369,6 @@ scale_fill_OPColors = function (palette = c('Primary',
     palette <- match.arg(palette)
     discrete_scale("fill",
                    "OPColors",
-                   manual_pal(unname(OPColors(palette))),
+                   scales::manual_pal(unname(OPColors(palette))),
                    ...)
 }
