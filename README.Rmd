@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.path = "vignettes/readme_figs/")
 
 # `OPColors` intro 
 
-`OPColors` contains a selection of `ggplot2` color palettes that I like (or can at least tolerate to some degree)
+`OPColors` are Oakland Promise Color palettes
 
 ## Installation
 

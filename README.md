@@ -1,8 +1,7 @@
 
 # `OPColors` intro
 
-`OPColors` contains a selection of `ggplot2` color palettes that I like
-(or can at least tolerate to some degree)
+`OPColors` are Oakland Promise Color palettes
 
 ## Installation
 
