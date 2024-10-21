@@ -1,4 +1,4 @@
-###############################
+f###############################
 #OP Colors
 #Author: Carl Romer
 #Date: 2024.10.21
@@ -20,13 +20,7 @@
 #' plot(0, 0, type = "n", xlab = "", ylab = "", xlim = c(0, 6), ylim = c(4, 0), yaxs = "i",
 #'      xaxt = "n", yaxt = "n", xaxs = "i")
 #' axis(side=3, at=1:3, c("default", "pal2", "pal3"), las=1)
-#'
-#' def <- OPcolors("default")
-#' points(seq(along = def), rep(1, length(def)), pch = 22, bg = def, cex = 8)
-#' pal2 <- OPcolors("pal2")
-#' points(seq(along = pal2), rep(2, length(pal2)), pch = 22, bg = pal2, cex = 8)
-#' pal3 <- OPcolors("pal3")
-#' points(seq(along = pal3), rep(3, length(pal3)), pch = 22, bg = pal3, cex = 8)
+#'z
 OPColors <- function(palette = c('Primary',
                                  'Default' ,
                                  'Highlight',
@@ -178,7 +172,7 @@ OPColors <- function(palette = c('Primary',
 #' @importFrom graphics par
 #' @examples
 #' display_OPcolors()
-display_OPcolors <- function(palette = c('Primary',
+display_OPColors <- function(palette = c('Primary',
                                          'Default' ,
                                          'Highlight',
                                          
@@ -223,7 +217,7 @@ display_OPcolors <- function(palette = c('Primary',
 #' @importFrom graphics plot
 #' @examples
 #' display_all_OPcolors()
-display_all_OPcolors <- function()
+display_all_OPColors <- function()
 {
     palette <- c('Primary',
                  'Default' ,
@@ -259,7 +253,7 @@ display_all_OPcolors <- function()
 
     for (c in 1:ncols)
     {
-        pal <- OPcolors(palette[c])
+        pal <- OPColors(palette[c])
         #points(seq(along = pal), rep(yseq[c], length(pal)), pch = 22, bg = pal, cex = 6)
         rect(xleft   = seq(along = pal) - 0.5,
              ybottom = yseq[c] - 0.85,
@@ -345,7 +339,7 @@ scale_colour_OPcolors = scale_color_OPcolors
 #' @export scale_fill_OPcolors
 #' @importFrom ggplot2 discrete_scale
 #' @rdname scale_OPcolors
-scale_fill_OPcolors = function (palette = c('Primary',
+scale_fill_OPColors = function (palette = c('Primary',
                                             'Default' ,
                                             'Highlight',
                                             
@@ -368,8 +362,8 @@ scale_fill_OPcolors = function (palette = c('Primary',
 {
     palette <- match.arg(palette)
     discrete_scale("fill",
-                   "OPcolors",
-                   manual_pal(unname(OPcolors(palette))),
+                   "OPColors",
+                   manual_pal(unname(OPColors(palette))),
                    ...)
 }
 
