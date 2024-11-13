@@ -9,7 +9,7 @@ Install `OPColors` from GitHub:
 
 ``` r
 install.packages("devtools")
-devtools::install_github("jaredhuling/OPColors")
+devtools::install_github("cromer043/OPColors")
 ```
 
 Access the `OPColors` color palettes with `OPColors()`:
