@@ -15,8 +15,6 @@ devtools::install_github("cromer043/OPColors")
 Access the `OPColors` color palettes with `OPColors()`:
 
 ``` r
-devtools::install_github("cromer043/OPColors")
-
 library(OPColors)
 ```
 
